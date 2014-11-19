@@ -51,6 +51,7 @@ public class Hanoi {
 		H.affiche();
 		System.out.println("------------------------------");
 		H.jouer();
-		System.out.println("Situation finale:"); H.affiche();
+		System.out.println("Situation finale:"); 
+		H.affiche();
     }
 }
