@@ -1,3 +1,5 @@
+package hanoi2;
+
 import java.util.Scanner;
 
 public class TestHanoi {

@@ -1,3 +1,5 @@
+package hanoi2;
+
 public class Hanoi {
 
     protected Tour depart, milieu, arrivee;
