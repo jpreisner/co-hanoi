@@ -1,8 +1,15 @@
 package hanoi1;
 
-public class ErreurTour extends Exception {
+public class ErreurTour extends ErreurPile {
 	
-    public ErreurTour() {
+ 
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ErreurTour() {
     	super();
     }
 

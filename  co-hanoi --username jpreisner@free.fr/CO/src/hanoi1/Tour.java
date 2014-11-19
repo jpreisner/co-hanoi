@@ -14,7 +14,7 @@ public class Tour extends Pile {
 
     public void empiler(Object v) throws ErreurPile {
     	Disque d = (Disque) v;
-		super.empiler(d);
+		/*super.empiler(d);*/
     	/*
     	if(v.getClass().getName().equals("Disque")){
     		Disque d = (Disque) v;
@@ -25,5 +25,15 @@ public class Tour extends Pile {
     		throw new ErreurPile("L'object v n'est pas un Disque");
     	}
     	*/
+    	
+    	if(!estVide()){
+    		if(d.compareTo((Disque)sommet())<0){
+    			super.empiler(d);
+    		}else{
+    			throw new ErreurTour("probleme:le disque qu'on veut empiler est plus grand que le sommet");
+    		}
+    	}else{
+    		super.empiler(d);
+    	}
     }
 }

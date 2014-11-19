@@ -2,7 +2,12 @@ package hanoi1;
 
 public class ErreurPile extends Exception {
 
-    public ErreurPile() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ErreurPile() {
     	super();
     }
 
