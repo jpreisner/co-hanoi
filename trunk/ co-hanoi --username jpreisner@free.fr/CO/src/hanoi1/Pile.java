@@ -5,6 +5,10 @@ public class Pile {
 	protected int capacite;
 	protected Object[] tab;
 
+	/**
+	 * On pourrait mettre en parametre la classe qu'il faut initialiser pour tab
+	 * @param capa
+	 */
     public Pile(int capacite) {
     	this.capacite = capacite;
     	tab = new Object[capacite];

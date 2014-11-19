@@ -4,12 +4,12 @@ public class Tour extends Pile {
     
     public Tour(int capa) {
     	super(capa);
-    	super.tab = new Disque[capa];
+    	tab = new Disque[capa];
     }
 
     public void remplir(int nb) throws ErreurPile {
-	for(; nb > 0; nb--) 
-	    this.empiler(new Disque(nb));
+		for(; nb > 0; nb--) 
+		    this.empiler(new Disque(nb));
     }
 
     public void empiler(Object v) throws ErreurPile {
