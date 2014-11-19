@@ -30,7 +30,7 @@ public class Tour extends Pile {
     		if(d.compareTo((Disque)sommet())<0){
     			super.empiler(d);
     		}else{
-    			throw new ErreurTour("probleme:le disque qu'on veut empiler est plus grand que le sommet");
+    			throw new ErreurTour("Probleme : le disque qu'on veut empiler est plus grand que le sommet");
     		}
     	}else{
     		super.empiler(d);
