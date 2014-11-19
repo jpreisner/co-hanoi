@@ -1,3 +1,5 @@
+package hanoi2;
+
 // MesEntiers3 n'implemente *pas* l'interface Empilable. On ne doit donc pas pouvoir s'en servir
 // comme disques pour la classe Hanoi.
 

@@ -1,3 +1,5 @@
+package hanoi2;
+
 public class MesEntiers2 implements Empilable {
     Integer val;
 
