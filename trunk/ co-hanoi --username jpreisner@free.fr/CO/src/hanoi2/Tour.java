@@ -15,17 +15,17 @@ public class Tour extends Pile {
     */
     
     public void empiler(Object v) throws ErreurPile {
-    	Empilable d = (Empilable) v;
+    	Empilable e = (Empilable) v;
     	if(!estVide()){
-    		if(d.compareTo((Empilable)sommet())<0){
-    			super.empiler(d);
+    		if(e.compareTo((Empilable)sommet())<0){
+    			super.empiler(e);
     		}
     		else{
     			throw new ErreurTour("Probleme : L'objet \"empilable\" qu'on veut empiler est plus grand que le sommet");
     		}
     	}
     	else{
-    		super.empiler(d);
+    		super.empiler(e);
     	}
     }
 }

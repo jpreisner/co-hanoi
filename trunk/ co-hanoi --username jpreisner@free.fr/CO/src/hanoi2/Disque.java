@@ -4,14 +4,13 @@ public class Disque implements Empilable {
 	private int val;
 	
 	public Disque(int val){
-		fixerTaille(val);
+		init(val);
 	}
 	
 	@Override
-	public void fixerTaille(int val) {
+	public void init(int nb) {
 		// TODO Auto-generated method stub
-		this.val = val;
-		
+		val = nb;
 	}
 
 	@Override
