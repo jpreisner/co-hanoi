@@ -4,13 +4,24 @@ public class Hanoi {
 
     protected Tour depart, milieu, arrivee;
 
-    public Hanoi(int nb, Class C) {
-	depart = new Tour(nb); milieu = new Tour(nb); arrivee = new Tour(nb);
-	/* initialiser la tour de depart avec nb instances de la classe
-	 * concernee
-	 */
+    public Hanoi(int nb, Class C) throws InstantiationException, IllegalAccessException, ErreurPile {
+		depart = new Tour(nb); milieu = new Tour(nb); arrivee = new Tour(nb);
+		
+		/* initialiser la tour de depart avec nb instances de la classe
+		 * concernee
+		 */
+		
+		remplir(nb, C);
     }
 
+    
+    public void remplir(int nb, Class C) throws ErreurPile, InstantiationException, IllegalAccessException {
+		for(; nb > 0; nb--) {
+			Empilable e = (Empilable) C.newInstance();
+			e.init(nb);
+			depart.empiler(e);
+		}
+    }
 
     public void jouer() {
 	try {
@@ -25,9 +36,9 @@ public class Hanoi {
     }
 
     public void affiche() {
-	System.out.println("Depart:"); depart.affiche();
-	System.out.println("Milieu:"); milieu.affiche();
-	System.out.println("Arrivee:"); arrivee.affiche();
+		System.out.println("Depart:"); depart.affiche();
+		System.out.println("Milieu:"); milieu.affiche();
+		System.out.println("Arrivee:"); arrivee.affiche();
     }
 
     // Empiler nb Disque de D vers A en se servant de M comme Tour auxiliaire

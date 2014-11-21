@@ -4,10 +4,10 @@ package hanoi2;
 
 interface Empilable extends Comparable {
 	
-	// Fixe la taille d'un element 
-	// Compare 2 elements
+	// Fixe la taille d'un element
+	public void init(int nb);
 	
-	public void fixerTaille(int val);
+	// Compare 2 elements
 	public int compareTo(Object v);
 	
 }
