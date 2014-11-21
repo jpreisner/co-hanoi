@@ -1,3 +1,5 @@
+package hanoi3;
+
 public class Disque2 extends Disque implements Empilable<??> {
 
     private int val2;

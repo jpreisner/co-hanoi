@@ -1,3 +1,5 @@
+package hanoi3;
+
 import java.util.ArrayList;
 
 public class TestHanoi {

@@ -1,3 +1,5 @@
+package hanoi3;
+
 public class HanoiNommee<??> extends Hanoi<??> {
 
     public HanoiNommee(ArrayList<??> inits) {

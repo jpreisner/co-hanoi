@@ -1,3 +1,5 @@
+package hanoi3;
+
 public class TourNommee<??> extends Tour<??> {
 
     protected String nom;
