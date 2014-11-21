@@ -40,8 +40,9 @@ public class Hanoi {
     protected void oneStep(int nb, Tour D, Tour A, Tour M) throws ErreurPile {
 		if (nb > 0) {
 		    oneStep(nb-1, D, M, A);
-		    A.empiler((Disque) D.sommet());
+		    Disque d = (Disque) D.sommet();
 		    D.depiler();
+		    A.empiler(d);
 		    oneStep(nb-1, M, A, D);
 		}
     }
