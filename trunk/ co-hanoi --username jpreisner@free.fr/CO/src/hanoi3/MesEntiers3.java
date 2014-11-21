@@ -1,3 +1,5 @@
+package hanoi3;
+
 public class MesEntiers3  {
     Integer val;
 

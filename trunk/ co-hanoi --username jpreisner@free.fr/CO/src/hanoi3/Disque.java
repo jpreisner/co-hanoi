@@ -1,3 +1,4 @@
+package hanoi3;
 
 public class Disque implements Empilable<Disque> {
     protected int val;
