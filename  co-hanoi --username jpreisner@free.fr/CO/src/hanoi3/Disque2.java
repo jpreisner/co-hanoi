@@ -1,6 +1,6 @@
 package hanoi3;
 
-public class Disque2 extends Disque implements Empilable<??> {
+public class Disque2 extends Disque {
 
     private int val2;
 
@@ -20,6 +20,8 @@ public class Disque2 extends Disque implements Empilable<??> {
      * avec la version de la super-classe (par exemple si on travaille sur
      * une tour qui melange des instances de Disque et de Disque2)
      */
-    public int compareTo() {
+    public int compareTo(Disque2 d) {
+    	System.out.println("compareTo de Disque2:");
+		return super.compareTo(d);
     }
 }
