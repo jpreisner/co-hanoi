@@ -1,15 +1,17 @@
 package hanoi3;
 
-public class HanoiNommee<??> extends Hanoi<??> {
+import java.util.ArrayList;
 
-    public HanoiNommee(ArrayList<??> inits) {
+public class HanoiNommee<T extends Empilable <? super T>> extends Hanoi<T> {
+
+    public HanoiNommee(ArrayList<T> inits) throws ErreurPile {
 	super(inits);
 	int nb = inits.size();
-	depart = new TourNommee<??>(nb, "Depart");
-	milieu = new TourNommee<??>(nb, "Milieu");
-	arrivee = new TourNommee<??>(nb, "Arrivee");
+	depart = new TourNommee<T>(nb, "Depart");
+	milieu = new TourNommee<T>(nb, "Milieu");
+	arrivee = new TourNommee<T>(nb, "Arrivee");
 	try {
-	    for(?? o: inits) 
+	    for(T o: inits) 
 		depart.empiler(o);
 	} catch (ErreurTour e) {
 	    System.out.println(e.getMessage());
@@ -22,4 +24,5 @@ public class HanoiNommee<??> extends Hanoi<??> {
 	depart.affiche(); milieu.affiche(); arrivee.affiche();
     }
 
+    
 }
