@@ -23,7 +23,7 @@ public class Pile<T> {
  		    throw new ErreurPile("Le nb d'élément dans la pile est a son maximum (capa=" + capacite + ")");
  	   	}
     	else{
-    		tab.set(hauteur(), v);
+    		tab.add(v);
     	}
     }
 
@@ -51,11 +51,7 @@ public class Pile<T> {
     }
 
     public int hauteur() {
-    	int i = 0;
-    	while (i<capacite && tab.get(i) != null){
-    		i++;
-    	}
-    	return i;
+    	return tab.size();
     }
 
     public int capacite () {
@@ -64,7 +60,7 @@ public class Pile<T> {
 
     public void affiche () { 
     	int i;
-    	for(i=0; i<hauteur(); i++){
+    	for(i=hauteur()-1; i>=0; i--){
     		System.out.println("Object n°" + i + " = " + tab.get(i));
     	}
     }
