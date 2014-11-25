@@ -2,8 +2,6 @@ package hanoi3;
 
 import java.util.ArrayList;
 
-import hanoi1.ErreurPile;
-
 // Pile Homogene de <T>, de capacite fixee a l'instantiation
 
 public class Pile<T> { 
@@ -35,7 +33,7 @@ public class Pile<T> {
  		    throw new ErreurPile("(depiler) Pas d'element dans la pile");
  	   	}
     	else{
-    		tab[hauteur()-1] = null;
+    		tab.remove(hauteur()-1);
     	}
     }
 
@@ -44,7 +42,7 @@ public class Pile<T> {
 		    throw new ErreurPile("(sommet) Pas d'element dans la pile");
 	   }
 	   else{
-		   return tab[hauteur()-1];
+		   return tab.get(hauteur()-1);
 	   }
     }
 
@@ -54,7 +52,7 @@ public class Pile<T> {
 
     public int hauteur() {
     	int i = 0;
-    	while (i<capacite && tab[i] != null){
+    	while (i<capacite && tab.get(i) != null){
     		i++;
     	}
     	return i;
@@ -67,7 +65,7 @@ public class Pile<T> {
     public void affiche () { 
     	int i;
     	for(i=0; i<hauteur(); i++){
-    		System.out.println("Object n°" + i + " = " + tab[i]);
+    		System.out.println("Object n°" + i + " = " + tab.get(i));
     	}
     }
 }
