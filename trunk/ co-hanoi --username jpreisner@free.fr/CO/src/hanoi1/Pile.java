@@ -70,7 +70,7 @@ public class Pile {
 	 * l'element en sommet de pile.
 	 */
     	int i;
-    	for(i=0; i<hauteur(); i++){
+    	for(i=hauteur()-1; i>=0; i--){
     		System.out.println("Object n°" + i + " = " + tab[i]);
     	}
     }
