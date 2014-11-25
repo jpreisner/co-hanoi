@@ -13,4 +13,12 @@ public class Disque implements Empilable<Disque> {
     public String toString() {
 	return "Disque[" + val + "]";
     }
+    
+    @Override
+    public int compareTo(Disque d){
+    	System.out.println("compareTo de Disque:");
+    	return val - d.val;
+    }
+
+
 }
