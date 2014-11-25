@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class HanoiNommee<T extends Empilable <? super T>> extends Hanoi<T> {
 
-    public HanoiNommee(ArrayList<T> inits) throws ErreurPile {
+    public HanoiNommee(ArrayList<? extends T> inits) {
 	super(inits);
 	int nb = inits.size();
 	depart = new TourNommee<T>(nb, "Depart");
