@@ -18,18 +18,18 @@ public class Disque implements Comparable {
     		throw new NullPointerException("(compareTo) l'objet v est null");
     	}
     	else{
-        	//if(v.getClass().getName().equals("Disque")){
-	    		Disque d = (Disque) v;
-	    		return this.val - d.getVal();
-	    	//}
-	    	//else{
-	    		//throw new ErreurPile("L'object v n'est pas un Disque");	// ErreurPile???
-	    	//}	
+    		Disque d = (Disque) v;
+    		if(val < d.getVal()){
+    			return -1;
+    		}
+    		else if(val == d.getVal()){
+    			return 0;
+    		}
+    		return 1;
     	}
     }
     
     public int getVal(){
     	return val;
-    }
-    
+    }   
 }
