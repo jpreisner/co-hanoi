@@ -8,16 +8,11 @@ public class Tour<T extends Empilable<? super T>> extends Pile<T> {
     }
     
     public void empiler(T v) throws ErreurPile{
-    	if(!estVide()){
-    		if(v.compareTo(sommet())<0){
-    			super.empiler(v);
-    		}
-    		else{
-    			throw new ErreurTour("Probleme : L'objet " +v.getClass().getName()+ " qu'on veut empiler est plus grand que le sommet");
-    		}
+    	if(estVide() || v.compareTo(sommet())<0){
+    		super.empiler(v);
     	}
     	else{
-    		super.empiler(v);
+    		throw new ErreurTour("Probleme avec l'objet " +v.getClass().getName()+ " qu'on veut empiler");
     	}
     }
 }
