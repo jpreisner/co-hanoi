@@ -21,16 +21,17 @@ public class Disque implements Empilable {
     	}
 		else{
 			Disque d = (Disque) v;
-			return (this.val-d.val);
+			if(val < d.getVal()){
+    			return -1;
+    		}
+    		else if(val == d.getVal()){
+    			return 0;
+    		}
+    		return 1;
 		}
 	}
 
 	public int getVal() {
 		return val;
 	}
-
-	public void setVal(int val) {
-		this.val = val;
-	}
-
 }
