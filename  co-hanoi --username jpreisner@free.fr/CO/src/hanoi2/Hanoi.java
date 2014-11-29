@@ -6,14 +6,8 @@ public class Hanoi {
 
     public Hanoi(int nb, Class C) throws InstantiationException, IllegalAccessException, ErreurPile {
 		depart = new Tour(nb); milieu = new Tour(nb); arrivee = new Tour(nb);
-		
-		/* initialiser la tour de depart avec nb instances de la classe
-		 * concernee
-		 */
-		
 		remplir(nb, C);
     }
-
     
     public void remplir(int nb, Class C) throws ErreurPile, InstantiationException, IllegalAccessException {
 		for(; nb > 0; nb--) {
@@ -43,11 +37,11 @@ public class Hanoi {
 
     // Empiler nb Disque de D vers A en se servant de M comme Tour auxiliaire
     protected void oneStep(int nb, Tour D, Tour A, Tour M) throws ErreurPile {
-	if (nb > 0) {
-	    oneStep(nb-1, D, M, A);
-	    A.empiler(D.sommet());
-	    D.depiler();
-	    oneStep(nb-1, M, A, D);
-	}
+		if (nb > 0) {
+		    oneStep(nb-1, D, M, A);
+		    A.empiler(D.sommet());
+		    D.depiler();
+		    oneStep(nb-1, M, A, D);
+		}
     }
 }
