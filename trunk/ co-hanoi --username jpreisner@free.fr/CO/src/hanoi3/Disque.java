@@ -16,9 +16,18 @@ public class Disque implements Empilable<Disque> {
     
     @Override
     public int compareTo(Disque d){
-    	System.out.println("compareTo de Disque:");
-    	return val - d.val;
+    	System.out.println("compareTo de Disque");
+		if(val < d.getVal()){
+			return -1;
+		}
+		else if(val == d.getVal()){
+			return 0;
+		}
+		return 1;
     }
-
+    
+    public int getVal() {
+		return val;
+	}
 
 }

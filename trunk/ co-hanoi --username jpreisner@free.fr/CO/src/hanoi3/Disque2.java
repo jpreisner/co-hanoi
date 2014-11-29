@@ -21,7 +21,11 @@ public class Disque2 extends Disque {
      * une tour qui melange des instances de Disque et de Disque2)
      */
     public int compareTo(Disque2 d) {
-    	System.out.println("compareTo de Disque2:");
+    	System.out.println("compareTo de Disque2");
 		return super.compareTo(d);
+    }
+    
+    public int getVal2(){
+    	return val2;
     }
 }

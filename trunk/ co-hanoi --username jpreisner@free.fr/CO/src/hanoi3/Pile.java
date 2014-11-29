@@ -20,7 +20,7 @@ public class Pile<T> {
     public void empiler(T v) throws ErreurPile {
     	// si la pile est pleine -> on refuse l'empilement
     	if(hauteur() == capacite){
- 		    throw new ErreurPile("Le nb d'élément dans la pile est a son maximum (capa=" + capacite + ")");
+ 		    throw new ErreurPile("La pile est pleine (capa=" + capacite + ")");
  	   	}
     	else{
     		tab.add(v);
@@ -30,7 +30,7 @@ public class Pile<T> {
     public void depiler () throws ErreurPile {
     	// si la pile est vide -> on refuse le dépilement
     	if(hauteur() == 0){
- 		    throw new ErreurPile("(depiler) Pas d'element dans la pile");
+ 		    throw new ErreurPile("(depiler) La pile est vide");
  	   	}
     	else{
     		tab.remove(hauteur()-1);
@@ -39,7 +39,7 @@ public class Pile<T> {
 
     public T sommet() throws ErreurPile {
  	   if(hauteur() == 0){
-		    throw new ErreurPile("(sommet) Pas d'element dans la pile");
+		    throw new ErreurPile("(sommet) La pile est vide");
 	   }
 	   else{
 		   return tab.get(hauteur()-1);
